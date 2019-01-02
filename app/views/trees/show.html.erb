@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @tree.family %>
+</p>
+
+<p>
+  <strong>Leaf-shape:</strong>
+  <%= @tree.leaf_shape %>
+</p>
+
+<p>
+  <strong>Amount-of-rings:</strong>
+  <%= @tree.amount_of_rings %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @tree.age %>
+</p>
+
+<%= link_to 'Edit', edit_tree_path(@tree) %> |
+<%= link_to 'Back', trees_path %>
