@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :lamps
   resources :trees
   Rails.application.routes.draw do
+  resources :lamps
     root 'cars#index'
     resources :cars
   end

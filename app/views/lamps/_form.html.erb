@@ -1,0 +1,29 @@
+<%= form_for(@lamp) do |f| %>
+  <% if @lamp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lamp.errors.count, "error") %> prohibited this lamp from being saved:</h2>
+
+      <ul>
+      <% @lamp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :make %><br>
+    <%= f.text_field :make %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :watt %><br>
+    <%= f.number_field :watt %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
